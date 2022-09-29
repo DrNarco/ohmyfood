@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+
+body
+{
+    margin: 0px;
+}
+
+header
+{
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    box-shadow: 0 1px 10px 0 grey;
+    padding: 4px;
+}
