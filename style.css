@@ -4,6 +4,7 @@
 body
 {
     margin: 0px;
+    font-family: 'roboto', sans-serif;
 }
 
 header
@@ -12,4 +13,22 @@ header
     text-align: center;
     box-shadow: 0 1px 10px 0 grey;
     padding: 4px;
+    position: relative;
 }
+
+main .location
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 3px;
+}
+
+main .location i
+{
+    font-size: 24px;
+}
+
