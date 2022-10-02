@@ -65,7 +65,9 @@ header {
 /* fonctionnement */
 .function
 {
-    padding: 0 16px;
+    padding: 0 32px;
+    padding-top: 20px;
+    padding-bottom: 60px;
 
     & h4{
         font-size: 24px;
@@ -75,6 +77,7 @@ header {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
+        padding-inline-start: 0px;
     }
 
     counter-reset: numbers;
@@ -117,4 +120,72 @@ header {
 /* restos */
 .restos {
     background-color: $light-grey;
+    padding: 0 32px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+    & h5 {
+        font-size: 24px;
+    }
+
+    & .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        & .nouveau {
+            position: relative;
+        }
+
+        & .nouveau::before {
+            content: "Nouveau";
+            position: absolute;
+            height: 32px;
+            width: 90px;
+            background-color: $tertiaire;
+            color: darken($tertiaire, $amount: 35%);
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 16px;
+            top: 16px;
+        }
+
+        & .card {
+            flex-grow: 1;
+            min-width: 20rem;
+            width: 35%;
+            border-radius: 24px;
+            @include shadow
+        }
+
+        & .details {
+            position: relative;
+        }
+
+        & img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 24px 24px 0 0;
+        }
+
+        & h6, {
+            font-size: 18px;
+            margin: 16px;
+        }
+
+        p {
+            margin-left: 16px;
+            margin-top: -12px;
+        }
+
+        & i {
+            font-size: 30px;
+            position: absolute;
+            right: 32px;
+            top: 23%;
+        }
+    }
 }
