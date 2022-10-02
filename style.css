@@ -32,9 +32,11 @@ header {
 /* discovery */
 .discovery {
   text-align: center;
+  background-color: #f6f6f6;
+  padding-top: 20px;
+  padding-bottom: 60px;
 }
 .discovery h3 {
-  margin-top: 60px;
   font-size: 24px;
 }
 .discovery p {
@@ -100,6 +102,11 @@ header {
   margin-right: 16px;
   color: #7e7e7e;
   font-size: 20px;
+}
+
+/* restos */
+.restos {
+  background-color: #f6f6f6;
 }
 
 /*# sourceMappingURL=style.css.map */

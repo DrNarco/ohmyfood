@@ -18,7 +18,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 16px;
-    background-color: $light-grey;
+    background-color: $medium-grey;
     text-align: center;
     padding: 3px;
     & i {
@@ -29,9 +29,11 @@ header {
 /* discovery */
 .discovery {
     text-align: center;
+    background-color: $light-grey;
+    padding-top: 20px;   
+    padding-bottom: 60px; 
     
     & h3 {
-        margin-top: 60px;
         font-size: 24px;
     }
     
@@ -109,4 +111,10 @@ header {
     }
     }
 
+}
+
+
+/* restos */
+.restos {
+    background-color: $light-grey;
 }
