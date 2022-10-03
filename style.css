@@ -11,6 +11,10 @@ a {
   color: inherit;
 }
 
+h3 {
+  font-size: 24px;
+}
+
 /* header */
 header {
   font-family: "Shrikhand", cursive;
@@ -41,9 +45,6 @@ header {
   padding-top: 20px;
   padding-bottom: 60px;
 }
-.discovery h3 {
-  font-size: 24px;
-}
 .discovery p {
   font-size: 16px;
   margin-bottom: 30px;
@@ -69,9 +70,6 @@ header {
   padding-top: 20px;
   padding-bottom: 60px;
   counter-reset: numbers;
-}
-.function h4 {
-  font-size: 24px;
 }
 .function ol {
   display: flex;
@@ -117,10 +115,7 @@ header {
   background-color: #f6f6f6;
   padding: 0 32px;
   padding-top: 20px;
-  padding-bottom: 60px;
-}
-.restos h5 {
-  font-size: 24px;
+  padding-bottom: 70px;
 }
 .restos .cards {
   display: flex;
@@ -160,7 +155,7 @@ header {
   object-fit: cover;
   border-radius: 24px 24px 0 0;
 }
-.restos .cards h6 {
+.restos .cards h4 {
   font-size: 18px;
   margin: 16px;
 }
@@ -173,6 +168,31 @@ header {
   position: absolute;
   right: 32px;
   top: 23%;
+}
+
+/* footer */
+footer {
+  background-color: #353535;
+  padding: 0 32px;
+  padding-top: 1px;
+  padding-bottom: 20px;
+}
+footer h5 {
+  font-family: "Shrikhand", cursive;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+footer p {
+  color: white;
+}
+footer .fa-hands-helping {
+  margin-right: 10px;
+}
+footer .fa-utensils {
+  margin-right: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

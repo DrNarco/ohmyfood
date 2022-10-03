@@ -33,10 +33,6 @@ header {
     padding-top: 20px;   
     padding-bottom: 60px; 
     
-    & h3 {
-        font-size: 24px;
-    }
-    
     & p {
         font-size: 16px;
         margin-bottom: 30px;
@@ -68,10 +64,6 @@ header {
     padding: 0 32px;
     padding-top: 20px;
     padding-bottom: 60px;
-
-    & h4{
-        font-size: 24px;
-    }
 
     & ol {
         display: flex;
@@ -122,11 +114,7 @@ header {
     background-color: $light-grey;
     padding: 0 32px;
     padding-top: 20px;
-    padding-bottom: 60px;
-
-    & h5 {
-        font-size: 24px;
-    }
+    padding-bottom: 70px;
 
     & .cards {
         display: flex;
@@ -171,7 +159,7 @@ header {
             border-radius: 24px 24px 0 0;
         }
 
-        & h6, {
+        & h4 {
             font-size: 18px;
             margin: 16px;
         }
@@ -187,5 +175,35 @@ header {
             right: 32px;
             top: 23%;
         }
+    }
+}
+
+
+/* footer */
+footer {
+    background-color: $dark;
+    padding: 0 32px;
+    padding-top: 1px;
+    padding-bottom: 20px;
+
+    & h5 {
+        font-family: 'Shrikhand', cursive;
+        font-size: 24px;
+        font-weight: 500;
+        color: white;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    & p {
+        color: white;
+    }
+
+    & .fa-hands-helping {
+        margin-right: 10px;
+    }
+
+    & .fa-utensils {
+        margin-right: 16px;
     }
 }
