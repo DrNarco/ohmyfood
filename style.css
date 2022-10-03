@@ -167,7 +167,19 @@ header {
   font-size: 30px;
   position: absolute;
   right: 32px;
-  top: 23%;
+  top: 18%;
+}
+.restos .cards .fas {
+  color: transparent;
+  background-image: linear-gradient(to top, rgb(255, 121, 218), rgb(147, 86, 220));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.restos .cards .fas:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 /* footer */

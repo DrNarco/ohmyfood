@@ -173,7 +173,21 @@ header {
             font-size: 30px;
             position: absolute;
             right: 32px;
-            top: 23%;
+            top: 18%;
+        }
+
+        & .fas {
+            color: transparent;
+            background-image: linear-gradient(to top, rgba(255, 121, 218, 1), rgba(147, 86, 220, 1));
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                opacity: 1;
+                transform: scale(1.1);
+            }
         }
     }
 }
