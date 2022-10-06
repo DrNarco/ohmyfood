@@ -1,0 +1,15 @@
+@mixin arrow {
+    display: flex;
+    position: absolute;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    font-size: 30px;
+    content: "\f060";
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}

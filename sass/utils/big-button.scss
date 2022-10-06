@@ -1,0 +1,17 @@
+@mixin big-button {
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 32px;
+    cursor: pointer;
+    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+    transition: transform 200ms; 
+    @include shadow; 
+    
+    &:hover {
+        @include button-grow;
+        opacity: 0.9;
+    }
+}
+

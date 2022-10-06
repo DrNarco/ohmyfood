@@ -53,11 +53,12 @@ header {
   color: white;
   font-size: 20px;
   border: none;
-  padding: 16px 20px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
+  padding: 14px 35px;
   border-radius: 32px;
+  cursor: pointer;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: transform 200ms;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
 }
 .discovery button:hover {
   transform: scale(1.04);
@@ -103,6 +104,7 @@ header {
 }
 .function li:hover {
   transform: scale(1.04);
+  opacity: 0.7;
 }
 .function li i {
   margin-right: 16px;
@@ -205,6 +207,195 @@ footer .fa-hands-helping {
 }
 footer .fa-utensils {
   margin-right: 16px;
+}
+
+@keyframes button-spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+/* header */
+#page-one {
+  position: relative;
+}
+#page-one .backwards {
+  position: absolute;
+  left: 28px;
+  top: 36px;
+  color: transparent;
+}
+
+#page-one::before {
+  display: flex;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  font-size: 30px;
+  content: "\f060";
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* banner */
+.banner {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+/* heading */
+.heading {
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  border-radius: 35px 35px 0 0;
+  margin-top: -36px;
+}
+.heading h2 {
+  font-family: "Shrikhand", cursive;
+  padding: 0 32px;
+  margin-top: 35px;
+  font-size: 30px;
+}
+.heading i {
+  font-size: 30px;
+  position: absolute;
+  right: 64px;
+  top: 40px;
+}
+.heading .fas {
+  color: transparent;
+  background-image: linear-gradient(to top, rgb(255, 121, 218), rgb(147, 86, 220));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.heading .fas:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* menus */
+.menus {
+  padding: 0 32px;
+  padding-bottom: 50px;
+  background-color: #f3f3f3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1000px) {
+  .menus {
+    grid-template-columns: 1fr;
+  }
+}
+.menus .category {
+  overflow: hidden;
+}
+.menus h3 {
+  font-weight: 300;
+  position: relative;
+}
+.menus h3::after {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 2px;
+  height: 4px;
+  width: 45px;
+  background-color: #99E2D0;
+}
+.menus .description {
+  background-color: white;
+  border-radius: 16px;
+  margin: 12px;
+  box-shadow: 0 0 16px lightgray;
+  transition: transform 200ms;
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.menus .description .details {
+  overflow: hidden;
+  padding: 4px;
+}
+.menus .description .details h4 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 10px 10px;
+  margin-bottom: -6px;
+}
+.menus .description .details p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 10px 10px;
+}
+.menus .description .price {
+  margin-left: auto;
+  margin-right: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+.menus .description .check {
+  display: grid;
+  place-items: center;
+  background-color: #99E2D0;
+  margin-right: -60px;
+  padding: 20px 0;
+  width: 60px;
+  transition: margin-right 0.5s;
+  flex-shrink: 0;
+}
+.menus .description i {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 16px;
+  color: #99E2D0;
+}
+.menus .description:hover .check {
+  margin-right: 0;
+}
+.menus .description:hover i {
+  animation: reverse 10s;
+}
+
+.button-copy {
+  background-color: #f3f3f3;
+  display: grid;
+  place-items: center;
+  padding-bottom: 60px;
+}
+.button-copy button {
+  color: white;
+  font-size: 20px;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 32px;
+  cursor: pointer;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  transition: transform 200ms;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
+}
+.button-copy button:hover {
+  transform: scale(1.04);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */
