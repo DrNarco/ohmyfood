@@ -3,7 +3,7 @@
 @import "../utils/menus-anim.scss";
 
 // header
-#page-one {
+#page {
   position: relative;
 
   & .backwards {
@@ -14,7 +14,7 @@
   }
 }
 
-#page-one::before {
+#page::before {
   @include arrow;
 }
 
@@ -46,7 +46,8 @@
     font-size: 30px;
     position: absolute;
     right: 64px;
-    top: 40px;
+    top: 38px;
+    cursor: pointer;
   }
 
   & .fas {
@@ -75,7 +76,7 @@
   background-color: $medium-grey;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  @media (max-width: 1000px) {
+  @media (max-width: 991px) {
     grid-template-columns: 1fr;
   }
 
@@ -187,4 +188,14 @@
   button {
     @include big-button;
   }
+}
+
+
+@media screen and (max-width: 767px) {
+  .heading {
+    & h2 {
+      font-size: 24px;
+    }
+  }
+  
 }
