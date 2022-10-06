@@ -1,8 +1,8 @@
-@import "../utils/animation.scss";
 @import "../utils/arrow.scss";
 @import "../utils/button-grow.scss";
+@import "../utils/menus-anim.scss";
 
-/* header */
+// header
 #page-one {
   position: relative;
 
@@ -16,17 +16,16 @@
 
 #page-one::before {
   @include arrow;
-
 }
 
-/* banner */
+// banner
 .banner {
   width: 100%;
   height: 60vh;
   object-fit: cover;
 }
 
-/* heading */
+// heading
 .heading {
   background-color: $medium-grey;
   display: flex;
@@ -69,7 +68,7 @@
   }
 }
 
-/* menus */
+// menus
 .menus {
   padding: 0 32px;
   padding-bottom: 50px;
@@ -98,7 +97,7 @@
       background-color: $tertiaire;
     }
   }
-
+  
   & .description {
     background-color: white;
     border-radius: 16px;
@@ -108,6 +107,15 @@
     display: flex;
     border-radius: 16px;
     overflow: hidden;
+    cursor: pointer;
+    animation: menus-anim 0.5s;
+    animation-fill-mode: both;
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation-delay: 100ms * $i;
+      }
+    }
+        
 
     & .details {
       overflow: hidden;
@@ -164,7 +172,7 @@
       }
 
       & i {
-        animation: reverse 10s;
+        animation: spin 10s;
       }
     }
   }

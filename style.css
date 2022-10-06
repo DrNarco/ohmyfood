@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
-/* body */
 body {
   margin: 0px;
   font-family: "roboto", sans-serif;
@@ -15,7 +14,6 @@ h3 {
   font-size: 24px;
 }
 
-/* header */
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -24,7 +22,6 @@ header {
   position: relative;
 }
 
-/* location */
 .location {
   display: flex;
   align-items: center;
@@ -38,7 +35,6 @@ header {
   font-size: 24px;
 }
 
-/* discovery */
 .discovery {
   text-align: center;
   background-color: #f6f6f6;
@@ -65,7 +61,6 @@ header {
   opacity: 0.9;
 }
 
-/* fonctionnement */
 .function {
   padding: 0 32px;
   padding-top: 20px;
@@ -112,7 +107,6 @@ header {
   font-size: 20px;
 }
 
-/* restos */
 .restos {
   background-color: #f6f6f6;
   padding: 0 32px;
@@ -184,7 +178,6 @@ header {
   transform: scale(1.1);
 }
 
-/* footer */
 footer {
   background-color: #353535;
   padding: 0 32px;
@@ -209,15 +202,14 @@ footer .fa-utensils {
   margin-right: 16px;
 }
 
-@keyframes button-spin {
+@keyframes menus-anim {
   0% {
-    transform: rotate(-270deg);
+    transform: scale(0);
   }
   100% {
-    transform: rotate(0);
+    transform: scale(1);
   }
 }
-/* header */
 #page-one {
   position: relative;
 }
@@ -244,14 +236,12 @@ footer .fa-utensils {
   transform: translateY(-50%);
 }
 
-/* banner */
 .banner {
   width: 100%;
   height: 60vh;
   object-fit: cover;
 }
 
-/* heading */
 .heading {
   background-color: #f3f3f3;
   display: flex;
@@ -286,7 +276,6 @@ footer .fa-utensils {
   transform: scale(1.1);
 }
 
-/* menus */
 .menus {
   padding: 0 32px;
   padding-bottom: 50px;
@@ -324,6 +313,21 @@ footer .fa-utensils {
   display: flex;
   border-radius: 16px;
   overflow: hidden;
+  cursor: pointer;
+  animation: menus-anim 0.5s;
+  animation-fill-mode: both;
+}
+.menus .description:nth-child(1) {
+  animation-delay: 100ms;
+}
+.menus .description:nth-child(2) {
+  animation-delay: 200ms;
+}
+.menus .description:nth-child(3) {
+  animation-delay: 300ms;
+}
+.menus .description:nth-child(4) {
+  animation-delay: 400ms;
 }
 .menus .description .details {
   overflow: hidden;
@@ -373,7 +377,7 @@ footer .fa-utensils {
   margin-right: 0;
 }
 .menus .description:hover i {
-  animation: reverse 10s;
+  animation: spin 10s;
 }
 
 .button-copy {

@@ -4,7 +4,8 @@
 @import "./utils/big-button.scss";
 
 
-/* header */
+
+// header
 header {
     font-family: 'Shrikhand', cursive;
     text-align: center;
@@ -13,7 +14,7 @@ header {
     position: relative;
 }
 
-/* location */
+// location
 .location {
     display: flex;
     align-items: center;
@@ -27,7 +28,7 @@ header {
     }
 }
 
-/* discovery */
+// discovery
 .discovery {
     text-align: center;
     background-color: $light-grey;
@@ -46,7 +47,7 @@ header {
 
 
 
-/* fonctionnement */
+// fonctionnement
 .function
 {
     padding: 0 32px;
@@ -98,7 +99,7 @@ header {
 }
 
 
-/* restos */
+// restos
 .restos {
     background-color: $light-grey;
     padding: 0 32px;
@@ -182,7 +183,7 @@ header {
 }
 
 
-/* footer */
+// footer
 footer {
     background-color: $dark;
     padding: 0 32px;
