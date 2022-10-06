@@ -258,6 +258,14 @@ footer .fa-utensils {
     transform: scale(1);
   }
 }
+@keyframes check-spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 #page {
   position: relative;
 }
@@ -426,7 +434,7 @@ footer .fa-utensils {
   margin-right: 0;
 }
 .menus .description:hover i {
-  animation: spin 10s;
+  animation: check-spin 400ms;
 }
 
 .button-copy {

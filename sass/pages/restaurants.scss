@@ -1,6 +1,7 @@
 @import "../utils/arrow.scss";
 @import "../utils/button-grow.scss";
 @import "../utils/menus-anim.scss";
+@import "../utils/check-spin.scss";
 
 // header
 #page {
@@ -173,7 +174,7 @@
       }
 
       & i {
-        animation: spin 10s;
+        animation: check-spin 400ms;
       }
     }
   }
