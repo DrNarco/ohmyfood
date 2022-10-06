@@ -1,20 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+@import "./utils/colors.scss";
 
 
 // body
 body {
-    margin: 0px;
-    font-family: 'roboto', sans-serif;
+  margin: 0px;
+  font-family: "roboto", sans-serif;
 
-    
+  & .loading {
+    background-color: #ffffff;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: loading-end 2s forwards;
+
+    &::after {
+      content: "Hello";
+      border-top: solid 5px $purple;
+      border-radius: 50%;
+      content: "";
+      height: 40px;
+      width: 40px;
+      animation: loading-spinner 0.8s infinite ease-in-out;
+    }
+  }
+
+  @keyframes loading-end {
+    to {
+      visibility: hidden;
+    }
+  }
+
+  @keyframes loading-spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 h3 {
-    font-size: 24px;
+  font-size: 24px;
 }
