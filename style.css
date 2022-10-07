@@ -84,7 +84,7 @@ header {
   padding: 14px 35px;
   border-radius: 32px;
   cursor: pointer;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-image: linear-gradient(to top, #9356dc, #FF79DA);
   transition: transform 200ms;
   box-shadow: 4px 12px 28px 5px rgba(0, 0, 0, 0.14);
 }
@@ -206,7 +206,7 @@ header {
 }
 .restos .cards .fas {
   color: transparent;
-  background-image: linear-gradient(to top, rgb(255, 121, 218), rgb(147, 86, 220));
+  background-image: linear-gradient(to top, #FF79DA, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -325,7 +325,7 @@ footer .fa-utensils {
 }
 .heading .fas {
   color: transparent;
-  background-image: linear-gradient(to top, rgb(255, 121, 218), rgb(147, 86, 220));
+  background-image: linear-gradient(to top, #FF79DA, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -456,7 +456,7 @@ footer .fa-utensils {
   padding: 14px 35px;
   border-radius: 32px;
   cursor: pointer;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-image: linear-gradient(to top, #9356dc, #FF79DA);
   transition: transform 200ms;
   box-shadow: 4px 12px 28px 5px rgba(0, 0, 0, 0.14);
 }

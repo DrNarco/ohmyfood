@@ -54,11 +54,7 @@
 
   & .fas {
     color: transparent;
-    background-image: linear-gradient(
-      to top,
-      rgba(255, 121, 218, 1),
-      rgba(147, 86, 220, 1)
-    );
+    background-image: linear-gradient( to top, $secondary, $primary );
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 0;
@@ -97,7 +93,7 @@
       left: 2px;
       height: 4px;
       width: 45px;
-      background-color: $tertiaire;
+      background-color: $tertiary;
     }
   }
   
@@ -152,7 +148,7 @@
     .check {
       display: grid;
       place-items: center;
-      background-color: $tertiaire;
+      background-color: $tertiary;
       margin-right: -60px;
       padding: 20px 0;
       width: 60px;
@@ -166,7 +162,7 @@
       width: 25px;
       height: 25px;
       border-radius: 16px;
-      color: $tertiaire;
+      color: $tertiary;
     }
 
     &:hover {

@@ -67,7 +67,7 @@ header {
       counter-increment: numbers;
       content: counter(numbers);
       color: white;
-      background-color: $purple;
+      background-color: $primary;
       display: grid;
       place-items: center;
       height: 25px;
@@ -88,9 +88,9 @@ header {
     &:hover {
       @include button-grow;
       @include hover-shadow;
-      background-color: lighten($purple, 35%);
+      background-color: lighten($primary, 35%);
       & i {
-        color: $purple;
+        color: $primary;
       }
     }
     & i {
@@ -122,8 +122,8 @@ header {
       position: absolute;
       height: 32px;
       width: 90px;
-      background-color: $tertiaire;
-      color: darken($tertiaire, $amount: 35%);
+      background-color: $tertiary;
+      color: darken($tertiary, $amount: 35%);
       font-weight: 500;
       display: flex;
       justify-content: center;
@@ -170,11 +170,7 @@ header {
 
     & .fas {
       color: transparent;
-      background-image: linear-gradient(
-        to top,
-        rgba(255, 121, 218, 1),
-        rgba(147, 86, 220, 1)
-      );
+      background-image: linear-gradient( to top, $secondary, $primary );
       background-clip: text;
       -webkit-background-clip: text;
       opacity: 0;

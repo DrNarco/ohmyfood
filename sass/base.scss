@@ -21,7 +21,7 @@ body {
 
     &::after {
       content: "Hello";
-      border-top: solid 5px $purple;
+      border-top: solid 5px $primary;
       border-radius: 50%;
       content: "";
       height: 40px;
