@@ -20,7 +20,7 @@ body {
     animation: loading-end 2s forwards;
 
     &::after {
-      content: "Hello";
+      content: "";
       border-top: solid 5px $primary;
       border-radius: 50%;
       content: "";
