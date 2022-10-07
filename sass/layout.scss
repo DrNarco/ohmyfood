@@ -2,232 +2,231 @@
 @import "./utils/button-grow.scss";
 @import "./utils/colors.scss";
 @import "./utils/big-button.scss";
-
-
+@import "./utils/hover-shadow.scss";
 
 // header
 header {
-    font-family: 'Shrikhand', cursive;
-    text-align: center;
-    box-shadow: 0 0 6px 0 $grey;
-    padding: 4px;
-    position: relative;
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 6px 0 $grey;
+  padding: 4px;
+  position: relative;
 }
 
 // location
 .location {
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    background-color: $medium-grey;
-    text-align: center;
-    padding: 3px;
-    & i {
-        font-size: 24px;
-    }
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: $medium-grey;
+  text-align: center;
+  padding: 3px;
+  & i {
+    font-size: 24px;
+    cursor: pointer;
+  }
 }
 
 // discovery
 .discovery {
-    text-align: center;
-    background-color: $light-grey;
-    padding-top: 20px;   
-    padding-bottom: 60px; 
-    
-    & p {
-        font-size: 16px;
-        margin-bottom: 30px;
-    }
+  text-align: center;
+  background-color: $light-grey;
+  padding-top: 20px;
+  padding-bottom: 60px;
 
-    & button {
-        @include big-button;
+  & p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  & button {
+    @include big-button;
+  }
 }
-}
-
-
 
 // fonctionnement
 .function {
-    padding: 0 32px;
-    padding-top: 20px;
-    padding-bottom: 60px;
+  padding: 0 32px;
+  padding-top: 20px;
+  padding-bottom: 60px;
 
-    & ol {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        padding-inline-start: 0px;
-        cursor: pointer;
+  & ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-inline-start: 0px;
+    cursor: pointer;
+  }
+
+  counter-reset: numbers;
+  & li {
+    position: relative;
+    &::before {
+      counter-increment: numbers;
+      content: counter(numbers);
+      color: white;
+      background-color: $purple;
+      display: grid;
+      place-items: center;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      position: absolute;
+      left: -12px;
+      top: 23px;
     }
-
-    counter-reset: numbers;
-    & li {
-        position: relative;
-        &::before {
-            counter-increment: numbers;
-            content: counter(numbers);
-            color: white;
-            background-color: $purple;
-            display: grid;
-            place-items: center;
-            height: 25px;
-            width: 25px;
-            border-radius: 50%;
-            position: absolute;
-            left: -12px;
-            top: 23px;
-        }
-        list-style-type: none;
-        font-weight: bold;
-        background-color: #f6f6f6;
-        padding: 25px 32px;
-        flex-grow: 1;
-        border-radius: 16px;
-        @include shadow;
-        transition: transform 200ms;
-            &:hover {
-                @include button-grow;
-                background-color: lighten($purple, 35%);
-                & i {
-                    color: $purple;
-                }
-            }
+    list-style-type: none;
+    font-weight: bold;
+    background-color: #f6f6f6;
+    padding: 25px 32px;
+    flex-grow: 1;
+    border-radius: 16px;
+    @include shadow;
+    transition: transform 200ms;
+    &:hover {
+      @include button-grow;
+      @include hover-shadow;
+      background-color: lighten($purple, 35%);
+      & i {
+        color: $purple;
+      }
+    }
     & i {
-        margin-right: 16px;
-        color: $grey;
-        font-size: 20px;
+      margin-right: 16px;
+      color: $grey;
+      font-size: 20px;
     }
-    }
-
+  }
 }
-
 
 // restos
 .restos {
-    background-color: $light-grey;
-    padding: 0 32px;
-    padding-top: 20px;
-    padding-bottom: 70px;
+  background-color: $light-grey;
+  padding: 0 32px;
+  padding-top: 20px;
+  padding-bottom: 70px;
 
-    & .cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
+  & .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 
-        & .nouveau {
-            position: relative;
-        }
-
-        & .nouveau::before {
-            content: "Nouveau";
-            position: absolute;
-            height: 32px;
-            width: 90px;
-            background-color: $tertiaire;
-            color: darken($tertiaire, $amount: 35%);
-            font-weight: 500;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            right: 16px;
-            top: 16px;
-        }
-
-        & .card {
-            flex-grow: 1;
-            min-width: 20rem;
-            width: 35%;
-            border-radius: 24px;
-            @include shadow
-        }
-
-        & .details {
-            position: relative;
-        }
-
-        & img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 24px 24px 0 0;
-        }
-
-        & h4 {
-            font-size: 18px;
-            margin: 16px;
-        }
-
-        p {
-            margin-left: 16px;
-            margin-top: -12px;
-        }
-
-        & i {
-            font-size: 30px;
-            position: absolute;
-            right: 32px;
-            top: 18%;
-        }
-
-        & .fas {
-            color: transparent;
-            background-image: linear-gradient(to top, rgba(255, 121, 218, 1), rgba(147, 86, 220, 1));
-            background-clip: text;
-            -webkit-background-clip: text;
-            opacity: 0;
-            transition: all 200ms ease-in-out;
-
-            &:hover {
-                opacity: 1;
-                transform: scale(1.1);
-            }
-        }
+    & .nouveau {
+      position: relative;
     }
-}
 
+    & .nouveau::before {
+      content: "Nouveau";
+      position: absolute;
+      height: 32px;
+      width: 90px;
+      background-color: $tertiaire;
+      color: darken($tertiaire, $amount: 35%);
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 16px;
+      top: 16px;
+    }
+
+    & .card {
+      flex-grow: 1;
+      min-width: 20rem;
+      width: 35%;
+      border-radius: 24px;
+      @include shadow;
+    }
+
+    & .details {
+      position: relative;
+    }
+
+    & img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 24px 24px 0 0;
+    }
+
+    & h4 {
+      font-size: 18px;
+      margin: 16px;
+    }
+
+    p {
+      margin-left: 16px;
+      margin-top: -12px;
+    }
+
+    & i {
+      font-size: 30px;
+      position: absolute;
+      right: 32px;
+      top: 18%;
+    }
+
+    & .fas {
+      color: transparent;
+      background-image: linear-gradient(
+        to top,
+        rgba(255, 121, 218, 1),
+        rgba(147, 86, 220, 1)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      opacity: 0;
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
 
 // footer
 footer {
-    background-color: $dark;
-    padding: 0 32px;
-    padding-top: 1px;
-    padding-bottom: 20px;
+  background-color: $dark;
+  padding: 0 32px;
+  padding-top: 1px;
+  padding-bottom: 20px;
 
-    & h5 {
-        font-family: 'Shrikhand', cursive;
-        font-size: 24px;
-        font-weight: 500;
-        color: white;
-        margin-top: 25px;
-        margin-bottom: 25px;
-    }
+  & h5 {
+    font-family: "Shrikhand", cursive;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 
-    & p {
-        color: white;
-    }
+  & p {
+    color: white;
+  }
 
-    & .fa-hands-helping {
-        margin-right: 10px;
-    }
+  & .fa-hands-helping {
+    margin-right: 10px;
+  }
 
-    & .fa-utensils {
-        margin-right: 16px;
-    }
+  & .fa-utensils {
+    margin-right: 16px;
+  }
 }
 
-
 @media screen and (max-width: 767px) {
-    ol {
-        display: flex;
-        flex-direction: column;
-    }
+  ol {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    ol {
-        display: flex;
-        flex-direction: column;
-    }
+  ol {
+    display: flex;
+    flex-direction: column;
+  }
 }

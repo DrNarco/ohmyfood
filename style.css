@@ -64,6 +64,7 @@ header {
 }
 .location i {
   font-size: 24px;
+  cursor: pointer;
 }
 
 .discovery {
@@ -85,10 +86,11 @@ header {
   cursor: pointer;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: transform 200ms;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
+  box-shadow: 4px 12px 28px 5px rgba(0, 0, 0, 0.14);
 }
 .discovery button:hover {
   transform: scale(1.04);
+  box-shadow: 4px 12px 28px 5px rgba(0, 0, 0, 0.2);
   opacity: 0.9;
 }
 
@@ -113,7 +115,7 @@ header {
   padding: 25px 32px;
   flex-grow: 1;
   border-radius: 16px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
+  box-shadow: 4px 12px 28px 5px rgba(0, 0, 0, 0.14);
   transition: transform 200ms;
 }
 .function li::before {
@@ -132,6 +134,7 @@ header {
 }
 .function li:hover {
   transform: scale(1.04);
+  box-shadow: 4px 12px 28px 5px rgba(0, 0, 0, 0.2);
   background-color: #f2eafb;
 }
 .function li:hover i {
@@ -176,7 +179,7 @@ header {
   min-width: 20rem;
   width: 35%;
   border-radius: 24px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
+  box-shadow: 4px 12px 28px 5px rgba(0, 0, 0, 0.14);
 }
 .restos .cards .details {
   position: relative;
@@ -386,6 +389,9 @@ footer .fa-utensils {
 .menus .description:nth-child(4) {
   animation-delay: 400ms;
 }
+.menus .description:nth-child(5) {
+  animation-delay: 500ms;
+}
 .menus .description .details {
   overflow: hidden;
   padding: 4px;
@@ -452,10 +458,11 @@ footer .fa-utensils {
   cursor: pointer;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: transform 200ms;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1803921569);
+  box-shadow: 4px 12px 28px 5px rgba(0, 0, 0, 0.14);
 }
 .button-copy button:hover {
   transform: scale(1.04);
+  box-shadow: 4px 12px 28px 5px rgba(0, 0, 0, 0.2);
   opacity: 0.9;
 }
 
