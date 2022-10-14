@@ -16,7 +16,7 @@ body .loading {
   animation: loading-end 2s forwards;
 }
 body .loading::after {
-  content: "Hello";
+  content: "";
   border-top: solid 5px #9356dc;
   border-radius: 50%;
   content: "";
@@ -263,7 +263,7 @@ footer .fa-utensils {
 }
 @keyframes check-spin {
   0% {
-    transform: rotate(-270deg);
+    transform: rotate(-375deg);
   }
   100% {
     transform: rotate(0);
@@ -441,6 +441,7 @@ footer .fa-utensils {
 }
 .menus .description:hover i {
   animation: check-spin 400ms;
+  animation-delay: 150ms;
 }
 
 .button-copy {
